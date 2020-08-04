@@ -10,12 +10,19 @@
   background: var(--color-primary);
 }
 
+#page-landing-content { /*eu criei*/
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
 .logo-container img {
   height: 10rem;
 }
 
 .hero-image {
-  width: 100%;
+  width: 50%; /*original 100%*/
 }
 
 .logo-container { 
@@ -33,6 +40,7 @@
 .buttons-container {
   display: flex;
   justify-content: center;
+  width: 80%;
   margin: 3.2rem 0;
 }
 
