@@ -1,5 +1,9 @@
 import React from 'react';
+
+import TeacherItem from '../../components/TeacherItem';
+
 import PageHeader from '../../components/PageHeader';
+import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
 
 import './styles.css';
 
@@ -22,6 +26,13 @@ function TeacherList() {
           </div>
         </form>
       </PageHeader>      
+    
+    <main>
+      <TeacherItem />
+      <TeacherItem />
+      <TeacherItem />
+    </main>
+
     </div>
   )
 }
