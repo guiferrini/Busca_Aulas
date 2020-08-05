@@ -1,0 +1,32 @@
+import express from 'express';
+
+const app = express();
+
+app.use(express.json()); // por padrão express n entende json
+
+const PORT = 3333;
+
+// http://localhost:3333/users
+//                 rota/recurso
+
+app.get('/users', (request, response) => {
+  const users = [
+    { name: 'gui', age: 31 },
+    { name: 'ze', age: 30 }
+  ]
+
+  return response.json(users); //retorna um json;
+  // return response.send('foi') //retorna um texto;
+})
+
+// recebe resposta no imnsomia dos users - http://localhost:3333/users
+app.post('/users', (request, response) => {
+  const users = [
+    { name: 'gui', age: 31 },
+    { name: 'ze', age: 30 }
+  ]
+
+  return response.json(users);
+})
+
+app.listen(PORT)

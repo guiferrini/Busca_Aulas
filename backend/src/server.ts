@@ -2,16 +2,15 @@ import express from 'express';
 
 const app = express();
 
+app.use(express.json()); // por padrão express n entende json
+
 const PORT = 3333;
 
-app.get('/users', (request, response) => {
-  const users = [
-    { name: 'gui', age: 31 },
-    { name: 'ze', age: 30 }
-  ]
+app.get('/', (request, response) => {
+  return response.json({ message: "Hello" });
+});
 
-  return response.json(users); //retorna um json;
-  // return response.send('foi') //retorna um texto;
-})
-
-app.listen(PORT)
+ 
+app.listen(PORT, () => {
+  console.log('Server Start ✅')
+});
